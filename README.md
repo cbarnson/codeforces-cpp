@@ -1,11 +1,12 @@
 <!-- ![Logo of the project](https://raw.githubusercontent.com/jehna/readme-best-practices/master/sample-logo.png) -->
 
-<h1>CodeForces C++</h1>
+# CodeForces C++
+> Competitive programming solutions
 <span>
-    <a href="https://codebarn.ca"><img src="img/logo.png" style="float: right;" width="55" height="55" alt=""></a>
+    <a href="https://codebarn.ca"><img src="img/logo.png" style="float: right;" width="55" height="55" alt="CodeBarn Blog"></a>
 </span>
 
-> Competitive programming solutions
+## Overview
 
 This repository is for CodeForces problem solutions, written in C++.  Also included are a handful of useful data structures, algorithms, and various implementations I've written over the years.
 
