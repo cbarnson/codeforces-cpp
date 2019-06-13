@@ -1,0 +1,46 @@
+#!/bin/bash
+
+filename=`ls -t1 | grep "\.cc\|\.py\|\.js" | head -n 1`
+base="${filename::-3}"
+ext="${filename##*.}"
+
+print() {
+    echo "-------------------------------"
+    echo "Settings"
+    echo "-------------------------------"
+    echo "Filename : ${filename}"
+    echo "Extension: ${ext}"
+    echo "Basename : ${base}"
+    echo "-------------------------------"
+    echo ""
+}
+
+print
+
+if [ "${ext}" == "cc" ] ; then
+    # echo "C++ mode"
+    g++ $filename -g -std=c++17 -Wno-unused-parameter -Wall -Wextra -Wconversion -Wshadow -Wfatal-errors -o sol || exit
+    for i in *.in; do
+        echo --- $i
+        ./sol < $i > o && (diff -Z -y o ${i::-3}.[ao]?? > t || cat t) || cat o
+    done
+fi
+
+if [ "${ext}" == "py" ] ; then
+    # echo "Python mode"
+    for i in *.in; do
+        echo --- $i
+        python ${filename} < $i > o && (diff -Z -y o ${i::-3}.[ao]?? > t || cat t) || cat o
+        # "/c/Python37/python.exe" ${filename} < $i > o && (diff -Z -y o ${i::-3}.[ao]?? > t || cat t) || cat o
+    done
+fi
+
+if [ "${ext}" == "js" ] ; then
+    # echo "JavaScript mode"
+    for i in *.in; do
+        echo --- $i
+        node ${filename} < $i > o && (diff -Z -y o ${i::-3}.[ao]?? > t || cat t) || cat o
+    done
+fi
+
+exit
