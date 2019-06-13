@@ -1,7 +1,7 @@
 # CodeForces C++
-> Check out my [blog](https://codebarn.ca) for more like this
+> Check out my blog at [CodeBarn.ca](https://codebarn.ca) for more
 <span>
-    <a href="https://codebarn.ca"><img src="img/logo.png" style="float: right;" width="55" height="55" alt="CodeBarn Blog"></a>
+    <a href="https://codebarn.ca"><img src="img/logo.png" width="55" height="55" alt="CodeBarn Blog"></a>
 </span>
 
 ## Overview
