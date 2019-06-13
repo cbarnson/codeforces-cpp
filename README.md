@@ -1,5 +1,3 @@
-<!-- ![Logo of the project](https://raw.githubusercontent.com/jehna/readme-best-practices/master/sample-logo.png) -->
-
 # CodeForces C++
 > Competitive programming solutions
 <span>
@@ -17,8 +15,6 @@ Most C++ programs you'll find in this repository are standalone, single-file.  M
 ### Compile / debugging
 
 Compilation is almost always the same (see below), and you run your executable with input being piped in from a file, e.g. `./solution.exe < input.txt`, and output to standard out (redirect to file with `./solution.exe < input.txt > output.txt`).
-
-<!-- I use several helper scripts to make this process of setup, testing, comparing, and (finally) submitting a little bit easier.  These scripts constitute a variety of `bash`, `sh`, `batch`, and `python` files.  The ones I use often are probably scattered about in the root of this workspace, and others have been archived to `/archives/scripts`.  Have a look, hopefully you'll find something that works. -->
 
 On Windows, I enjoy using [MSYS2](http://www.msys2.org/) since you get `pacman`.  But you can also try [Cygwin](https://www.cygwin.com/), or you can download [MinGW-64](https://mingw-w64.org) and use a MinTTY emulator like [Git-bash](https://gitforwindows.org/).  On Linux, just use whatever you have, as `GCC` is pretty universally accessible (on new setups of say, Ubuntu for example, you may need to run `sudo apt-get install build-essential`).
 
@@ -72,6 +68,7 @@ links to humans using your project. You can include links like:
 
 The code in this project is licensed under MIT license.
 
+```
 The MIT License (MIT)
 
 Copyright (c) 2019 C. Barnson
@@ -93,3 +90,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+```
