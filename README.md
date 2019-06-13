@@ -1,5 +1,5 @@
 # CodeForces C++
-> Check out my [blog](https://codebarn.ca) for more stuff like this
+> Check out my [blog](https://codebarn.ca) for more like this
 <span>
     <a href="https://codebarn.ca"><img src="img/logo.png" style="float: right;" width="55" height="55" alt="CodeBarn Blog"></a>
 </span>
