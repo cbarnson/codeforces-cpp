@@ -1,10 +1,8 @@
 <!-- ![Logo of the project](https://raw.githubusercontent.com/jehna/readme-best-practices/master/sample-logo.png) -->
 
+<h1>CodeForces C++</h1>
 <span>
-    <h1>
-        CodeForces C++
-    <img src="img/logo.png" style="float: right;" width="55" height="55" alt="">
-    </h1>
+    <a href="https://codebarn.ca"><img src="img/logo.png" style="float: right;" width="55" height="55" alt=""></a>
 </span>
 
 > Competitive programming solutions
