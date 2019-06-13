@@ -15,5 +15,16 @@
         "Makefile.am": "makefile",
         "configure.ac": "makefile",
         "ostream": "cpp"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "LICENSE": true,
+        ".clang-format": true,
+        ".editorconfig": true,
+        ".vscode/ipch": true
     }
 }
