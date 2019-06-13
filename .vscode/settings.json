@@ -15,5 +15,5 @@
         "Makefile.am": "makefile",
         "configure.ac": "makefile",
         "ostream": "cpp"
-    },
+    }
 }

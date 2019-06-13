@@ -1,4 +1,4 @@
-#!/bin/sh
+#!bash
 
 # clear; clear
 
@@ -22,8 +22,8 @@ myfile=`ls -t1 *.cc | head -n 1`
 echo $myfile
 g++ $myfile -g -Og -std=c++11 -Wall -Wextra -Wconversion -Wshadow -o sol || exit
 
-# Option 4: 
-# this way changes the usage so you don't have to type the .cc after the 
+# Option 4:
+# this way changes the usage so you don't have to type the .cc after the
 # problem source file (e.g. for A.cc, just type ./run A)
 # g++ $1.cc -g -Og -std=c++11 -Wall -Wextra -Wconversion -Wshadow -Wfatal-errors -o sol || exit
 
