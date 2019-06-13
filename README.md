@@ -33,15 +33,10 @@ Lets say you are solving problem `1102E` on CodeForces ([here](https://codeforce
 
 ### Online judges
 
-- UVa Online Judge: https://uva.onlinejudge.org/, [uHunt](https://uhunt.onlinejudge.org/), [Live Archive](https://icpcarchive.ecs.baylor.edu/)
 - CodeForces: https://codeforces.com/, [Code drills](https://code-drills.com), [CodeForces Visualizer](https://cfviz.netlify.com/)
+- UVa Online Judge: https://uva.onlinejudge.org/, [uHunt](https://uhunt.onlinejudge.org/), [Live Archive](https://icpcarchive.ecs.baylor.edu/)
 - Kattis: https://www.kattis.com/
 
-### Past contests
-
-- North America Qualifier (NAQ): [2018](https://open.kattis.com/contests/naq18open)
-- Alberta Collegiate Programming Contest (ACPC): [2017](https://acpc17.kattis.com/standings), [2018](https://acpc18.kattis.com/standings)
-- Rocky Mountain Regional Contest (RMRC): [2013](https://open.kattis.com/problem-sources/Rocky%20Mountain%20Regional%20Contest%20%28RMRC%29%202013), [2014](https://open.kattis.com/problem-sources/Rocky%20Mountain%20Regional%20Contest%20%28RMRC%29%202014), [2015](https://open.kattis.com/problem-sources/Rocky%20Mountain%20Regional%20Contest%20%28RMRC%29%202015), [2016](https://open.kattis.com/problem-sources/Rocky%20Mountain%20Regional%20Contest%20%28RMRC%29%202016), [2017](https://open.kattis.com/problem-sources/Rocky%20Mountain%20Regional%20Contest%20%28RMRC%29%202017), [2018](https://open.kattis.com/problem-sources/Rocky%20Mountain%20Regional%20Contest%20%28RMRC%29%202018)
 
 ### Learning
 
