@@ -67,7 +67,7 @@ class CodeforcesSingleProblemParser(HTMLParser):
 
     def handle_data(self, data):
         if self.start_copy:
-            clean_data = data.strip() + '\n'
+            clean_data = data.strip()
             if DEBUG:
                 case_line = f'Case {self.case_counter} : {self.case_type}'
                 print('-' * len(case_line))

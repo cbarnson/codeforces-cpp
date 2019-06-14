@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm *.in
+rm *.out
+rm *.exe
+rm o
+rm t
