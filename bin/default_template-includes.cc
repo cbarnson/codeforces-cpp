@@ -1,10 +1,5 @@
-#include <assert.h>
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include <algorithm>
+#include <assert.h>
 #include <bitset>
 #include <chrono>
 #include <climits>
@@ -17,16 +12,22 @@
 #include <limits>
 #include <list>
 #include <map>
+#include <math.h>
 #include <numeric>
 #include <queue>
 #include <set>
 #include <sstream>
 #include <stack>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <string>
+#include <time.h>
 #include <tuple>
 #include <type_traits>
 #include <utility>
 #include <vector>
+
 
 #define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
@@ -38,6 +39,6 @@ typedef vector<vi> vvi;
 typedef vector<vector<ii>> vvii;
 
 int main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(0);
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
 }

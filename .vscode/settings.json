@@ -15,7 +15,8 @@
         "Makefile.am": "makefile",
         "configure.ac": "makefile",
         "ostream": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "numeric": "cpp"
     },
     "files.exclude": {
         "**/.git": true,
@@ -26,6 +27,8 @@
         "LICENSE": true,
         ".clang-format": false,
         ".editorconfig": false,
-        ".vscode/ipch": true
+        ".vscode/ipch": true,
+        "o": true,
+        "t": true
     }
 }
