@@ -6,7 +6,6 @@
         "-here",
         "-no-start"
     ],
-    "C_Cpp.default.includePath": ["c:\\msys64\\mingw64\\include\\c++\\8.3.0\\x86_64-w64-mingw32\\bits\\stdc++.h"],
     "files.associations": {
         "*.cc": "cpp",
         "*.gitattributes": "ignore",
@@ -15,7 +14,8 @@
         ".emacs": "lisp",
         "Makefile.am": "makefile",
         "configure.ac": "makefile",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "string": "cpp"
     },
     "files.exclude": {
         "**/.git": true,
@@ -24,8 +24,8 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "LICENSE": true,
-        ".clang-format": true,
-        ".editorconfig": true,
+        ".clang-format": false,
+        ".editorconfig": false,
         ".vscode/ipch": true
     }
 }

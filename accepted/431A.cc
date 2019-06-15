@@ -9,16 +9,16 @@ typedef pair<int, int> ii;
 typedef vector<int> vi;
 
 int main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(0);
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
 
-  vi a(5);
-  FR (i, 4)
+    vi a(5);
+    FR(i, 4)
     cin >> a[i + 1];
-  string s;
-  cin >> s;
+    string s;
+    cin >> s;
 
-  cout << accumulate(begin(s), end(s), 0LL, [&](ll x, char c) {
-    return x + a[(int)(c - '0')];
-  }) << endl;
+    cout << accumulate(begin(s), end(s), 0LL, [&](ll x, char c) {
+        return x + a[(int)(c - '0')];
+    }) << endl;
 }

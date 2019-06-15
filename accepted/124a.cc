@@ -9,9 +9,9 @@ typedef pair<int, int> ii;
 typedef vector<int> vi;
 
 int main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(0);
-  int n, a, b;
-  cin >> n >> a >> b;
-  cout << min(n - a - 1, b) + 1 << endl;
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    int n, a, b;
+    cin >> n >> a >> b;
+    cout << min(n - a - 1, b) + 1 << endl;
 }

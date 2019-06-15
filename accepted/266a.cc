@@ -5,22 +5,21 @@
 using namespace std;
 
 typedef long long ll;
-typedef pair<int, int> ii; 
-typedef vector<int> vi;    
+typedef pair<int, int> ii;
+typedef vector<int> vi;
 
 int main() {
 
-   ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
-   
-   int n;
-   string s;
-   cin >> n >> s;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-   int cnt = 0;
-   for (int i = 1; i < s.length(); i++)
-      if (s[i] == s[i-1]) cnt++;
+    int n;
+    string s;
+    cin >> n >> s;
 
-   cout << cnt << endl;
+    int cnt = 0;
+    for (int i = 1; i < s.length(); i++)
+        if (s[i] == s[i - 1]) cnt++;
 
+    cout << cnt << endl;
 }

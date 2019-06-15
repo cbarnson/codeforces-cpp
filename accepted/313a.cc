@@ -5,18 +5,18 @@
 using namespace std;
 
 typedef long long ll;
-typedef pair<int, int> ii; 
-typedef vector<int> vi;    
+typedef pair<int, int> ii;
+typedef vector<int> vi;
 
 int main() {
 
-   ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-   int a;
-   cin >> a;
-   int b = a / 10;   
-   int c = (a % 10) + (a / 100) * 10;
+    int a;
+    cin >> a;
+    int b = a / 10;
+    int c = (a % 10) + (a / 100) * 10;
 
-   cout << max(a, max(b, c)) << endl;
+    cout << max(a, max(b, c)) << endl;
 }

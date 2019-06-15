@@ -5,26 +5,23 @@
 using namespace std;
 
 typedef long long ll;
-typedef pair<int, int> ii; 
-typedef vector<int> vi;    
+typedef pair<int, int> ii;
+typedef vector<int> vi;
 
 int main() {
 
-   ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-   vi A = { 4, 7, 44, 47, 74, 77, 444, 447, 474, 477, 744, 747, 774, 777 };
-   int n;
-   cin >> n;
+    vi A = {4, 7, 44, 47, 74, 77, 444, 447, 474, 477, 744, 747, 774, 777};
+    int n;
+    cin >> n;
 
-   for (auto &x : A) {
-      if (n % x == 0) {
-	 cout << "YES" << endl;
-	 return 0;
-      }
-   }
-   cout << "NO" << endl;
-   
-
-
+    for (auto &x : A) {
+        if (n % x == 0) {
+            cout << "YES" << endl;
+            return 0;
+        }
+    }
+    cout << "NO" << endl;
 }

@@ -5,25 +5,22 @@
 using namespace std;
 
 typedef long long ll;
-typedef pair<int, int> ii; 
-typedef vector<int> vi;    
+typedef pair<int, int> ii;
+typedef vector<int> vi;
 
 int main() {
 
-   ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-   string s;
-   cin >> s;
+    string s;
+    cin >> s;
 
-   auto i = s.find(string(7, '1'));
-   auto j = s.find(string(7, '0'));
+    auto i = s.find(string(7, '1'));
+    auto j = s.find(string(7, '0'));
 
-   if (i != string::npos || j != string::npos)
-      cout << "YES" << endl;
-   else
-      cout << "NO" << endl;
-   
-
-
+    if (i != string::npos || j != string::npos)
+        cout << "YES" << endl;
+    else
+        cout << "NO" << endl;
 }

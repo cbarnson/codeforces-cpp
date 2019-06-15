@@ -9,18 +9,18 @@ typedef pair<int, int> ii;
 typedef vector<int> vi;
 
 int main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(0);
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
 
-  ll a, b, s;
-  cin >> a >> b >> s;
+    ll a, b, s;
+    cin >> a >> b >> s;
 
-  auto ans = [](bool p) { cout << (p ? "Yes" : "No") << endl; };
+    auto ans = [](bool p) { cout << (p ? "Yes" : "No") << endl; };
 
-  ll x = abs(a) + abs(b);
-  if (x > s) {
-    ans(false);
-  } else {
-    ans((s - x) % 2 == 0);
-  }
+    ll x = abs(a) + abs(b);
+    if (x > s) {
+        ans(false);
+    } else {
+        ans((s - x) % 2 == 0);
+    }
 }

@@ -14,18 +14,18 @@ typedef vector<int> vi;
 typedef vector<vi> vvi;
 
 int main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(0);
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
 
-  set<ii> S;
-  int n, x, y, xx, yy;
-  cin >> n >> x >> y;
-  while (n--) {
-    cin >> xx >> yy;
-    int dx = xx - x, dy = yy - y;
-    int g = __gcd(dy, dx);
-    S.emplace(dy / g, dx / g);
-  }
+    set<ii> S;
+    int n, x, y, xx, yy;
+    cin >> n >> x >> y;
+    while (n--) {
+        cin >> xx >> yy;
+        int dx = xx - x, dy = yy - y;
+        int g = __gcd(dy, dx);
+        S.emplace(dy / g, dx / g);
+    }
 
-  cout << S.size() << endl;
+    cout << S.size() << endl;
 }

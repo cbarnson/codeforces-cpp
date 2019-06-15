@@ -5,25 +5,22 @@
 using namespace std;
 
 typedef long long ll;
-typedef pair<int, int> ii; 
-typedef vector<int> vi;    
+typedef pair<int, int> ii;
+typedef vector<int> vi;
 
 int main() {
 
-   ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-   ll n, m;
-   cin >> n >> m;
+    ll n, m;
+    cin >> n >> m;
 
-   ll x = n - m;
-   ll mx = (x * (x + 1)) / 2;
+    ll x = n - m;
+    ll mx = (x * (x + 1)) / 2;
 
-   ll y = n / m, z = n % m;
-   ll mi = m * ((y * (y - 1)) / 2) + z * y;
+    ll y = n / m, z = n % m;
+    ll mi = m * ((y * (y - 1)) / 2) + z * y;
 
-   cout << mi << " " << mx << endl;
-   
-
-
+    cout << mi << " " << mx << endl;
 }

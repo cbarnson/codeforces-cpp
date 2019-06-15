@@ -12,17 +12,18 @@ typedef pair<int, int> ii;
 typedef vector<int> vi;
 
 int main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(0);
-  int n;
-  string s;
-  map<string, int> m;
-  while (cin >> n >> s) {
-    FR(i, n - 1) { m[s.substr(i, 2)] += 1; }
-    string ans = s.substr(0, 2);
-    for (auto& [k, v] : m) {
-      if (m[ans] < v) ans = k;
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    int n;
+    string s;
+    map<string, int> m;
+    while (cin >> n >> s) {
+        FR(i, n - 1) { m[s.substr(i, 2)] += 1; }
+        string ans = s.substr(0, 2);
+        for (auto &[k, v] : m) {
+            if (m[ans] < v)
+                ans = k;
+        }
+        cout << ans << endl;
     }
-    cout << ans << endl;
-  }
 }

@@ -5,24 +5,23 @@
 using namespace std;
 
 typedef long long ll;
-typedef pair<int, int> ii; 
-typedef vector<int> vi;    
+typedef pair<int, int> ii;
+typedef vector<int> vi;
 
 int main() {
 
-   ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-   string s;
-   cin >> s;
+    string s;
+    cin >> s;
 
-   sort(begin(s), end(s));
-   auto i = unique(begin(s), end(s));
-   int c = i - begin(s);
+    sort(begin(s), end(s));
+    auto i = unique(begin(s), end(s));
+    int c = i - begin(s);
 
-   if (c & 1) cout << "IGNORE HIM!" << endl;
-   else cout << "CHAT WITH HER!" << endl;
-   
-
-
+    if (c & 1)
+        cout << "IGNORE HIM!" << endl;
+    else
+        cout << "CHAT WITH HER!" << endl;
 }

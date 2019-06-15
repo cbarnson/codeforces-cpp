@@ -5,32 +5,28 @@
 using namespace std;
 
 typedef long long ll;
-typedef pair<int, int> ii; 
-typedef vector<int> vi;    
+typedef pair<int, int> ii;
+typedef vector<int> vi;
 
 int main() {
 
-   ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-   map<string, int> mp;
+    map<string, int> mp;
 
-   int n;
-   cin >> n;
-   FR(i, n) {
+    int n;
+    cin >> n;
+    FR(i, n) {
 
-      string s;
-      cin >> s;
+        string s;
+        cin >> s;
 
-      if (mp.find(s) != mp.end()) {
-	 cout << s << mp[s]++ << endl;
-      } else {
-	 mp.emplace(s, 1);
-	 cout << "OK" << endl;
-      }
-      
-   }
-   
-
-
+        if (mp.find(s) != mp.end()) {
+            cout << s << mp[s]++ << endl;
+        } else {
+            mp.emplace(s, 1);
+            cout << "OK" << endl;
+        }
+    }
 }

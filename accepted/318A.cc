@@ -5,28 +5,25 @@
 using namespace std;
 
 typedef long long ll;
-typedef pair<int, int> ii; 
-typedef vector<int> vi;    
+typedef pair<int, int> ii;
+typedef vector<int> vi;
 
 int main() {
 
-   ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-   ll n, k;
-   cin >> n >> k;
+    ll n, k;
+    cin >> n >> k;
 
-   ll no = (n + 1) / 2, ne = n / 2;
-   
-   // in odds?
-   if (k <= no) {
-      cout << 2 * (k - 1) + 1 << endl;
-      return 0;
-   }
+    ll no = (n + 1) / 2, ne = n / 2;
 
-   // evens?
-   cout << 2 * (k - no) << endl;
-   
+    // in odds?
+    if (k <= no) {
+        cout << 2 * (k - 1) + 1 << endl;
+        return 0;
+    }
 
-
+    // evens?
+    cout << 2 * (k - no) << endl;
 }

@@ -5,37 +5,36 @@
 using namespace std;
 
 typedef long long ll;
-typedef pair<int, int> ii; 
-typedef vector<int> vi;    
+typedef pair<int, int> ii;
+typedef vector<int> vi;
 
 int main() {
 
-   ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-   ll n, m;
-   cin >> n >> m;
+    ll n, m;
+    cin >> n >> m;
 
-   ll j = 0, cnt = 0;
-   FR(i, m) {
-      ll x; cin >> x; x--;
-      if (j != x) {
+    ll j = 0, cnt = 0;
+    FR(i, m) {
+        ll x;
+        cin >> x;
+        x--;
+        if (j != x) {
 
-	 if (j < x) cnt += (x - j);	 
-	 else cnt += n - j + x;
-	 
-	 j = x;
-      }
-      // while (j != x) {
-      // 	 j = (j + 1) % n;
-      // 	 cnt++;
-      // }      
-   }
+            if (j < x)
+                cnt += (x - j);
+            else
+                cnt += n - j + x;
 
-   cout << cnt << endl;
+            j = x;
+        }
+        // while (j != x) {
+        // 	 j = (j + 1) % n;
+        // 	 cnt++;
+        // }
+    }
 
-   
-   
-
-
+    cout << cnt << endl;
 }

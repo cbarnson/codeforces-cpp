@@ -5,29 +5,24 @@
 using namespace std;
 
 typedef long long ll;
-typedef pair<int, int> ii; 
-typedef vector<int> vi;    
+typedef pair<int, int> ii;
+typedef vector<int> vi;
 
 int main() {
 
-   ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-   int n, j = 0;
-   cin >> n;
-   FR(i, n) {
-      string s;
-      cin >> s;
-      if (s.find('+') != string::npos)
-	 j++;
-      else
-	 j--;
-   }
+    int n, j = 0;
+    cin >> n;
+    FR(i, n) {
+        string s;
+        cin >> s;
+        if (s.find('+') != string::npos)
+            j++;
+        else
+            j--;
+    }
 
-
-   cout << j << endl;
-   
-   
-
-
+    cout << j << endl;
 }

@@ -5,22 +5,22 @@
 using namespace std;
 
 typedef long long ll;
-typedef pair<int, int> ii; 
-typedef vector<int> vi;    
+typedef pair<int, int> ii;
+typedef vector<int> vi;
 
 int main() {
 
-   ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-   int t, a;
-   cin >> t;
-   while (t--) {
-      cin >> a;
-      if (360 % (180 - a) == 0) {
-	 cout << "YES" << endl;
-      } else {
-	 cout << "NO" << endl;
-      }
-   }
+    int t, a;
+    cin >> t;
+    while (t--) {
+        cin >> a;
+        if (360 % (180 - a) == 0) {
+            cout << "YES" << endl;
+        } else {
+            cout << "NO" << endl;
+        }
+    }
 }

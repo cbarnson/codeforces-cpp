@@ -5,23 +5,20 @@
 using namespace std;
 
 typedef long long ll;
-typedef pair<int, int> ii; 
-typedef vector<int> vi;    
+typedef pair<int, int> ii;
+typedef vector<int> vi;
 
 int main() {
 
-   ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-   
-   int n, m;
-   cin >> n >> m;
+    int n, m;
+    cin >> n >> m;
 
-   n = m = min(n, m);
-   if (n & 1)
-      cout << "Akshat" << endl;
-   else
-      cout << "Malvika" << endl;
-
-
+    n = m = min(n, m);
+    if (n & 1)
+        cout << "Akshat" << endl;
+    else
+        cout << "Malvika" << endl;
 }

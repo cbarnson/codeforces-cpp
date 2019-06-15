@@ -5,26 +5,26 @@
 using namespace std;
 
 typedef long long ll;
-typedef pair<int, int> ii; 
-typedef vector<int> vi;    
+typedef pair<int, int> ii;
+typedef vector<int> vi;
 
 int main() {
 
-   ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-   int n;
-   cin >> n;
-   vi A(n); for (auto &x : A) cin >> x;
+    int n;
+    cin >> n;
+    vi A(n);
+    for (auto &x : A) cin >> x;
 
-   int mx = max_element(A.begin(), A.end()) - A.begin();
-   int cnt = 0;
-   while (mx > 0) swap (A[mx], A[mx-1]), cnt++, mx--;
-   
+    int mx = max_element(A.begin(), A.end()) - A.begin();
+    int cnt = 0;
+    while (mx > 0) swap(A[mx], A[mx - 1]), cnt++, mx--;
 
-   int mi = min_element(A.rbegin(), A.rend()) - A.rbegin();
-   mi = n - mi - 1;
-   while (mi < n - 1) swap (A[mi], A[mi+1]), cnt++, mi++;
+    int mi = min_element(A.rbegin(), A.rend()) - A.rbegin();
+    mi = n - mi - 1;
+    while (mi < n - 1) swap(A[mi], A[mi + 1]), cnt++, mi++;
 
-   cout << cnt << endl;
+    cout << cnt << endl;
 }

@@ -5,29 +5,25 @@
 using namespace std;
 
 typedef long long ll;
-typedef pair<int, int> ii; 
-typedef vector<int> vi;    
+typedef pair<int, int> ii;
+typedef vector<int> vi;
 
 int main() {
 
-   ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-   string a, b;
-   cin >> a >> b;
+    string a, b;
+    cin >> a >> b;
 
-   transform(begin(a), end(a), begin(a), ::tolower);
-   transform(begin(b), end(b), begin(b), ::tolower);
+    transform(begin(a), end(a), begin(a), ::tolower);
+    transform(begin(b), end(b), begin(b), ::tolower);
 
-   int ans = 0;
-   if (a < b) 
-      ans = -1;
-   else if (b < a)
-      ans = 1;
+    int ans = 0;
+    if (a < b)
+        ans = -1;
+    else if (b < a)
+        ans = 1;
 
-   cout << ans << endl;
-	
-   
-
-
+    cout << ans << endl;
 }

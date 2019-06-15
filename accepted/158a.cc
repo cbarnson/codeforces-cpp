@@ -5,19 +5,22 @@
 using namespace std;
 
 typedef long long ll;
-typedef pair<int, int> ii; 
-typedef vector<int> vi;    
+typedef pair<int, int> ii;
+typedef vector<int> vi;
 
 int main() {
 
-   ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-   int n, k;
-   cin >> n >> k;
+    int n, k;
+    cin >> n >> k;
 
-   vi A(n);
-   for (auto &x : A) cin >> x;
+    vi A(n);
+    for (auto &x : A) cin >> x;
 
-   cout << partition(begin(A), end(A), [=](int x) { return x > 0 && x >= A[k-1]; }) - begin(A) << endl;
+    cout << partition(begin(A), end(A),
+                      [=](int x) { return x > 0 && x >= A[k - 1]; }) -
+                begin(A)
+         << endl;
 }

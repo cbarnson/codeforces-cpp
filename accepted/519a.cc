@@ -5,29 +5,29 @@
 using namespace std;
 
 typedef long long ll;
-typedef pair<int, int> ii; 
-typedef vector<int> vi;    
+typedef pair<int, int> ii;
+typedef vector<int> vi;
 
 int main() {
 
-   ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-   string s = "qrbnpk";
-   vi r = { 9, 5, 3, 3, 1, 0 };
+    string s = "qrbnpk";
+    vi r = {9, 5, 3, 3, 1, 0};
 
-   int w = 0, b = 0;
-   char c;
-   while (cin >> c) {
-      if (c == '.') continue;
+    int w = 0, b = 0;
+    char c;
+    while (cin >> c) {
+        if (c == '.') continue;
 
-      int i = s.find(tolower(c));
-      (isupper(c) ? w : b) += r[i];
-   }
-   if (w < b) cout << "Black" << endl;
-   else if (w > b) cout << "White" << endl;
-   else cout << "Draw" << endl;
-   
-
-
+        int i = s.find(tolower(c));
+        (isupper(c) ? w : b) += r[i];
+    }
+    if (w < b)
+        cout << "Black" << endl;
+    else if (w > b)
+        cout << "White" << endl;
+    else
+        cout << "Draw" << endl;
 }

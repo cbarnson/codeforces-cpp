@@ -5,29 +5,27 @@
 using namespace std;
 
 typedef long long ll;
-typedef pair<int, int> ii; 
-typedef vector<int> vi;    
+typedef pair<int, int> ii;
+typedef vector<int> vi;
 
 int main() {
 
-   ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-   int n;
-   cin >> n;
+    int n;
+    cin >> n;
 
-   int c = 0, mx = 0;
-   FR(i, n) {
+    int c = 0, mx = 0;
+    FR(i, n) {
 
-      int a, b;
-      cin >> a >> b;
-      c -= a; c += b;
+        int a, b;
+        cin >> a >> b;
+        c -= a;
+        c += b;
 
-      mx = max(mx, c);
-   }
+        mx = max(mx, c);
+    }
 
-   cout << mx << endl;
-   
-
-
+    cout << mx << endl;
 }
