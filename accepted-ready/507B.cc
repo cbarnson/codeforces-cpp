@@ -44,7 +44,8 @@ int main() {
         return 0;
     }
 
-    // Binary search the answer:
+    // BINARY SEARCH THE ANSWER:
+    //
     // This approach depends on a partitioning on two possible answers.  Here,
     // 'hi' represents the top segment (i.e. "yes, it is possible"), and 'lo'
     // represents the bottom segment (i.e. "no, it is not possible").
