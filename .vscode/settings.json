@@ -16,7 +16,21 @@
         "configure.ac": "makefile",
         "ostream": "cpp",
         "string": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "vector": "cpp",
+        "limits": "cpp",
+        "valarray": "cpp",
+        "csetjmp": "cpp",
+        "cctype": "cpp",
+        "cstdio": "cpp",
+        "cstdarg": "cpp",
+        "csignal": "cpp",
+        "cinttypes": "cpp",
+        "ccomplex": "cpp",
+        "cstring": "cpp",
+        "iomanip": "cpp",
+        "iostream": "cpp",
+        "string_view": "cpp"
     },
     "files.exclude": {
         "**/.git": true,
@@ -30,5 +44,11 @@
         ".vscode/ipch": true,
         "o": true,
         "t": true
-    }
+    },
+    "C_Cpp.errorSquiggles": "Disabled",
+    "C_Cpp.default.includePath":  [
+        "c:\\msys64\\mingw64\\include\\c++\\8.3.0\\",
+        "c:\\msys64\\mingw64\\include\\c++\\8.3.0\\x86_64-w64-mingw32\\bits\\",
+    ],
+    "C_Cpp.intelliSenseEngineFallback": "Disabled",
 }

@@ -1,49 +1,46 @@
-// Problem #  : 766B
-// Created on : 2018-Nov-09 13:19:53
+// 766B - Mahmoud and a Triangle
+// http://codeforces.com/problemset/problem/766/B
+
 #include <bits/stdc++.h>
-#define FR(i, n) for (ll i = 0; i < (n); ++i)
+#define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
-#if __has_include("default_cf.h")
-#include "default_cf.h"
-#endif
 
 typedef long long ll;
 typedef pair<int, int> ii;
 typedef vector<int> vi;
-typedef vector<vi> vvi;
 
-// bool isPossibleTriangle(ll a, ll b, ll c) {}
+// A degenerate triangle
+bool is_degenerate(int a, int b, int c) {
+    return a + b == c;
+}
 
-// Triangle Inequalities
-// Note: isPossible true for degenerate triangles; to change,
-// make it a + b > c (possible and not degenerate)
-bool isDegenerate(ll a, ll b, ll c) { return (a + b == c); }
-bool isPossible(ll a, ll b, ll c) { return (a + b > c); }
-bool isImpossible(ll a, ll b, ll c) { return (a + b < c); }
-
-// Sort such that a <= b <= c
-void sort3(ll &a, ll &b, ll &c) {
-  swap(a, (a < min(b, c) ? a : (b < c ? b : c)));
-  swap(b, (b < c ? b : c));
+// A triangle that cannot exist
+bool is_impossible(int a, int b, int c) {
+    return a + b < c;
 }
 
 int main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(0);
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
 
-  ll n;
-  cin >> n;
+    int n;
+    cin >> n;
 
-  vi A(n);
-  FR(i, n) cin >> A[i];
+    vi A(n);
+    for (auto &i : A) cin >> i;
 
-  sort(begin(A), end(A));
-  for (ll i = 0; i < n - 2; i++) {
-    ll a = A[i], b = A[i + 1], c = A[i + 2];
-    if (isPossible(a, b, c)) {
-      cout << "YES\n";
-      return 0;
+    // Sort the list of numbers.  Why? By the Triangle Inequality Theorem, we
+    // know that the sum of any two side lengths must be strictly greater than
+    // the length of the third.  Obviously then, if we have 3 lengths, we only
+    // really care to test that the sum of the two smallest sides are greater
+    // than the third. https://en.wikipedia.org/wiki/Triangle_inequality
+    sort(begin(A), end(A));
+
+    FR(i, n - 2) {
+        if (A[i] + A[i + 1] > A[i + 2]) {
+            cout << "YES\n";
+            return 0;
+        }
     }
-  }
-  cout << "NO\n";
+    cout << "NO\n";
 }
