@@ -21,8 +21,7 @@ int main() {
         FR(i, n - 1) { m[s.substr(i, 2)] += 1; }
         string ans = s.substr(0, 2);
         for (auto &[k, v] : m) {
-            if (m[ans] < v)
-                ans = k;
+            if (m[ans] < v) ans = k;
         }
         cout << ans << endl;
     }

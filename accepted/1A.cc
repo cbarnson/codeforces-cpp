@@ -1,19 +1,15 @@
-// Problem #    : 1A
-// Created on   : 2018-09-27 21:08:14
+// 1A - Theatre Square
+// http://codeforces.com/problemset/problem/1/A
+// Time Limit   : 1 seconds
+// Memory Limit : 256 MB
 #include <bits/stdc++.h>
-#define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
 
-typedef long long ll;
-typedef pair<int, int> ii;
-typedef vector<int> vi;
-
 int main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(NULL);
-
-  ll n, m, a;
-  cin >> n >> m >> a;
-
-  cout << ((n + a - 1) / a) * ((m + a - 1) / a) << endl;
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    long long n, m, a;
+    cin >> n >> m >> a;
+    long long t = ((n / a) + (n % a ? 1 : 0)) * ((m / a) + (m % a ? 1 : 0));
+    cout << t << endl;
 }

@@ -1,22 +1,22 @@
-// Problem #    : 479A
-// Created on   : 2018-10-14 11:39:01
+// 479A - Expression
+// http://codeforces.com/problemset/problem/479/A
+// Time Limit   :  seconds
+// Memory Limit :  MB
 #include <bits/stdc++.h>
-#define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
 
-typedef long long ll;
-typedef pair<int, int> ii;
-typedef vector<int> vi;
-
 int main() {
-
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(0);
+    vector<int> a(3);
+    for (int i = 0; i < 3; i++) {
+        cin >> a[i];
+    }
 
-    int a, b, c;
-    cin >> a >> b >> c;
-    vi A = {a + b + c, a + b * c, (a + b) * c,
-            a * b * c, a * b + c, a * (b + c)};
-    int mx = *max_element(begin(A), end(A));
-    cout << mx << endl;
+    int mx = -1;
+    mx = max(mx, a[0] + a[1] + a[2]);
+    mx = max(mx, a[0] * (a[1] + a[2]));
+    mx = max(mx, (a[0] + a[1]) * a[2]);
+    mx = max(mx, a[0] * a[1] * a[2]);
+    cout << mx << '\n';
 }

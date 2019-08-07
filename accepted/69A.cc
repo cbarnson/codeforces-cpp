@@ -1,31 +1,28 @@
-// Problem #    : 69A
-// Created on   : 2018-10-14 10:40:46
+// 69A - Young Physicist
+// http://codeforces.com/problemset/problem/69/A
+// Time Limit   : 2 seconds
+// Memory Limit : 256 MB
 #include <bits/stdc++.h>
-#define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
 
-typedef long long ll;
-typedef pair<int, int> ii;
-typedef vector<int> vi;
-
 int main() {
-
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(0);
 
-    int n, x;
-    vi A = {0, 0, 0};
-
+    int n;
     cin >> n;
-    FR(i, n) {
-        FR(j, 3) {
+    vector<int> a(3, 0);
+    for (int i = 0; i < n; i++) {
+        int x;
+        for (int j = 0; j < 3; j++) {
             cin >> x;
-            A[j] += x;
+            a[j] += x;
         }
     }
 
-    if (all_of(begin(A), end(A), [](int y) { return y == 0; })) {
-        cout << "YES" << endl;
-    } else
-        cout << "NO" << endl;
+    if (all_of(a.begin(), a.end(), [](int x) { return x == 0; })) {
+        cout << "YES\n";
+    } else {
+        cout << "NO\n";
+    }
 }

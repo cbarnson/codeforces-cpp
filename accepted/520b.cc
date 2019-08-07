@@ -1,48 +1,41 @@
-// Problem #    : 520b
-// Created on   : 2018-10-24 11:17:44
+// 520B - Two Buttons
+// http://codeforces.com/problemset/problem/520/B
+// Time Limit   : 2 seconds
+// Memory Limit : 256 MB
 #include <bits/stdc++.h>
-#define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
 
-typedef long long ll;
-typedef pair<int, int> ii; 
-typedef vector<int> vi;    
+const int MAXN = (int)(1e4 * 2 + 1);
 
+// BFS: O(|E| + |V|)
+// In this case, we have at <= 20000 vertices and up to 2 edges per vertex, so 2
+// * 20000 = 40000 = |E| O(40000 + 20000) = small
+int bfs(int n, int m) {
+    vector<int> D(MAXN, -1);
+    D[n] = 0;
+
+    // This works for queue initialization of one single value, "s"
+    queue<int> q({n});
+    while (!q.empty()) {
+        int u = q.front();
+        q.pop();
+        int x = u - 1, y = u * 2;
+        if (x < 0 || y > MAXN) continue;
+
+        // the initializer may be a braced-init-list
+        // https://en.cppreference.com/w/cpp/language/range-for
+        for (auto c : {x, y}) {
+            if (D[c] == -1) D[c] = D[u] + 1, q.push(c);
+        }
+    }
+    return D[m];
+}
 
 int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
 
-   ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
-
-   int n, m;
-   cin >> n >> m;
-
-   vector<vi> g(2 * 10000 + 1, vi());
-
-   for (int i = 1; i <= 2 * 10000; i++) {
-      if (i - 1 >= 1) g[i].push_back(i - 1);
-      if (i * 2 <= 2 * 10000) g[i].push_back(i * 2);
-   }
-
-   vi D(2 * 10000 + 1, -1);
-   queue<int> q;
-   q.emplace(n);
-
-   while (!q.empty()) {
-      int u = q.front();
-      q.pop();
-      
-      if (u == m) {
-	 cout << D[u] + 1 << endl;
-	 return 0;
-      }
-      
-      for (auto &v : g[u]) {
-	 if (D[v] == -1) {
-	    D[v] = D[u] + 1;
-	    q.emplace(v);
-	 }
-      }
-   }
-
+    int n, m;
+    cin >> n >> m;
+    cout << bfs(n, m) << "\n";
 }

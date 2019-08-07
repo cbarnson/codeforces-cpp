@@ -1,26 +1,22 @@
-// Problem #    : 263A
-// Created on   : 2018-10-01 14:08:50
+// 263A - Beautiful Matrix
+// http://codeforces.com/problemset/problem/263/A
+// Time Limit   : 2 seconds
+// Memory Limit : 256 MB
 #include <bits/stdc++.h>
-#define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
 
-typedef long long ll;
-typedef pair<int, int> ii;
-typedef vector<int> vi;
-
 int main() {
-
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(0);
 
-    vector<vi> g(5, vi(5, 0));
-    int x, y;
-    FR(i, 5) FR(j, 5) {
-        cin >> g[i][j];
-        if (g[i][j] == 1) {
-            x = i, y = j;
+    int x;
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            cin >> x;
+            if (x == 1) {
+                cout << abs(2 - i) + abs(2 - j) << endl;
+                return 0;
+            }
         }
     }
-
-    cout << abs(2 - x) + abs(2 - y) << endl;
 }

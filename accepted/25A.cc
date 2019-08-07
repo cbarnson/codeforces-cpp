@@ -1,33 +1,20 @@
-// Problem #    : 25A
-// Created on   : 2018-10-14 15:06:40
+// 25A - IQ test
+// http://codeforces.com/problemset/problem/25/A
+// Time Limit   : 2 seconds
+// Memory Limit : 256 MB
 #include <bits/stdc++.h>
-#define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
-
-typedef long long ll;
-typedef pair<int, int> ii;
-typedef vector<int> vi;
 
 int main() {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-
-    int n, e = 0, o = 0;
+    cin.tie(0);
+    int n, o = 0;
     cin >> n;
-    vi A(n);
-    for (auto &x : A) {
-        cin >> x;
-        x %= 2;
-        if (x)
-            o++;
-        else
-            e++;
-    }
-
-    FR(i, n) {
-        if ((o == 1 && A[i] == 1) || (e == 1 && A[i] == 0)) {
-            cout << i + 1 << endl;
-            return 0;
-        }
-    }
+    vector<int> A(n);
+    for (auto &i : A) cin >> i;
+    o = count_if(A.begin(), A.end(), [](int x) { return x & 1; });
+    cout << find_if(A.begin(), A.end(),
+                    [&](int x) { return (o > (n - o) ? ~x & 1 : x & 1); })
+                - A.begin() + 1
+         << '\n';
 }

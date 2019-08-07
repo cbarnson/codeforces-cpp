@@ -1,28 +1,22 @@
-// Problem #    : 282A
-// Created on   : 2018-09-27 23:53:10
+// 282A - Bit++
+// http://codeforces.com/problemset/problem/282/A
+// Time Limit   : 1 seconds
+// Memory Limit : 256 MB
 #include <bits/stdc++.h>
-#define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
 
-typedef long long ll;
-typedef pair<int, int> ii;
-typedef vector<int> vi;
-
 int main() {
-
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-
-    int n, j = 0;
+    cin.tie(0);
+    int n, x = 0;
     cin >> n;
-    FR(i, n) {
-        string s;
-        cin >> s;
-        if (s.find('+') != string::npos)
-            j++;
-        else
-            j--;
+    while (n--) {
+        string s; getline(cin >> ws, s);
+        if (s.find('-') != string::npos) {
+            x--;
+        } else {
+            x++;
+        }
     }
-
-    cout << j << endl;
+    cout << x << endl;
 }

@@ -1,35 +1,33 @@
-// Problem #    : 474b
-// Created on   : 2018-10-24 11:11:19
+// 474B - Worms
+// http://codeforces.com/problemset/problem/474/B
+// Time Limit   : 1 seconds
+// Memory Limit : 256 MB
 #include <bits/stdc++.h>
-#define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
 
-typedef long long ll;
-typedef pair<int, int> ii;
-typedef vector<int> vi;
-
 int main() {
-
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(0);
+    int n, m, sz, x;
+    // vector<int> A;
+    // Normal arrays over push_back into vector
+    // 93ms --> 78ms
+    // 6200 KB --> 3908 KB
 
-    int n;
+    // We given in question that the sum of all a_1, ..., a_n <= 10^6
+    const int max_n = 1e6 + 10;
+    int A[max_n];
+
+    // Read in the pile sizes, and create an inverse lookup in A
     cin >> n;
-    vi A(1000050);
-
-    int j = 0;
-    FR(i, n) {
-        int x;
-        cin >> x;
-        FR(k, x) { A[j + k] = i + 1; }
-        j += x;
+    int k = 0;
+    for (int i = 0; i < n; i++) {
+        cin >> sz;
+        while (sz--) A[k++] = i + 1;
     }
-
-    int m;
     cin >> m;
-    FR(i, m) {
-        int x;
+    while (m--) {
         cin >> x;
-        cout << A[x - 1] << endl;
+        cout << A[x - 1] << "\n";
     }
 }

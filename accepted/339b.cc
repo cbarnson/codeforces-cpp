@@ -1,40 +1,24 @@
-// Problem #    : 339b
-// Created on   : 2018-10-14 17:08:21
+// 339B - Xenia and Ringroad
+// http://codeforces.com/problemset/problem/339/B
+// Time Limit   : 2 seconds
+// Memory Limit : 256 MB
 #include <bits/stdc++.h>
-#define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
 
-typedef long long ll;
-typedef pair<int, int> ii;
-typedef vector<int> vi;
-
 int main() {
-
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-
-    ll n, m;
+    cin.tie(0);
+    long long n, m, t = 0, p = 0;
     cin >> n >> m;
-
-    ll j = 0, cnt = 0;
-    FR(i, m) {
-        ll x;
+    while (m--) {
+        long long x;
         cin >> x;
         x--;
-        if (j != x) {
-
-            if (j < x)
-                cnt += (x - j);
-            else
-                cnt += n - j + x;
-
-            j = x;
-        }
-        // while (j != x) {
-        // 	 j = (j + 1) % n;
-        // 	 cnt++;
-        // }
+        if (x < p)
+            t += n - abs(p - x);
+        else
+            t += abs(x - p);
+        p = x;
     }
-
-    cout << cnt << endl;
+    cout << t << '\n';
 }

@@ -1,26 +1,20 @@
-// Problem #    : 231a
-// Created on   : 2018-09-27 23:06:22
+// 231A - Team
+// http://codeforces.com/problemset/problem/231/A
+// Time Limit   : 2 seconds
+// Memory Limit : 256 MB
 #include <bits/stdc++.h>
-#define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
 
-typedef long long ll;
-typedef pair<int, int> ii;
-typedef vector<int> vi;
-
 int main() {
-
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-
+    cin.tie(0);
     int n;
     cin >> n;
-
-    int a, b, c, cnt = 0;
-    FR(i, n) {
-        cin >> a >> b >> c;
-        if (a + b + c > 1) cnt++;
+    int t = 0;
+    while (n--) {
+        vector<int> A(3);
+        for (auto &i : A) cin >> i;
+        t += (count_if(begin(A), end(A), [](int x) {return x == 1;})) >= 2 ? 1 : 0;
     }
-
-    cout << cnt << endl;
+    cout << t << endl;
 }

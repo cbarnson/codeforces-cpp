@@ -1,32 +1,21 @@
-// Problem #    : 58A
-// Created on   : 2018-10-14 09:28:53
+// 58A - Chat room
+// http://codeforces.com/problemset/problem/58/A
+// Time Limit   : 1 seconds
+// Memory Limit : 256 MB
 #include <bits/stdc++.h>
-#define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
 
-typedef long long ll;
-typedef pair<int, int> ii;
-typedef vector<int> vi;
-
 int main() {
-
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-
-    string s;
+    cin.tie(0);
+    string s, h = "hello";
     cin >> s;
-
-    string h = "hello";
     int i = 0;
-    for (int j = 0; j < (int)s.length(); j++) {
-        if (s[j] == h[i])
+    for (int j = 0; j < (int)s.size(); j++) {
+        if (s[j] == h[i]) {
             i++;
-        if (i == 5)
-            break;
+            if (i == h.size()) break;
+        }
     }
-
-    if (i == 5)
-        cout << "YES" << endl;
-    else
-        cout << "NO" << endl;
+    cout << (i == h.size() ? "YES\n" : "NO\n");
 }

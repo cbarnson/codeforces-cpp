@@ -1,29 +1,22 @@
-// Problem #    : 318A
-// Created on   : 2018-10-14 13:17:14
+// 318A - Even Odds
+// http://codeforces.com/problemset/problem/318/A
+// Time Limit   : 1 seconds
+// Memory Limit : 256 MB
 #include <bits/stdc++.h>
-#define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
 
-typedef long long ll;
-typedef pair<int, int> ii;
-typedef vector<int> vi;
-
 int main() {
-
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(0);
 
-    ll n, k;
+    // given n, k in [1, 10^12]
+    // give the number in the kth position according to problem
+    long long n, k, o, e;
     cin >> n >> k;
-
-    ll no = (n + 1) / 2, ne = n / 2;
-
-    // in odds?
-    if (k <= no) {
-        cout << 2 * (k - 1) + 1 << endl;
-        return 0;
+    o = (n + 1) / 2, e = n / 2;
+    if (k <= o) {
+        cout << k * 2 - 1 << '\n';
+    } else {
+        cout << (k - o) * 2 << '\n';
     }
-
-    // evens?
-    cout << 2 * (k - no) << endl;
 }

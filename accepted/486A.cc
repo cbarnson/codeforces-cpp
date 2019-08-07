@@ -1,21 +1,19 @@
-// Problem #    : 486A
-// Created on   : 2018-10-14 12:19:48
+// 486A - Calculating Function
+// http://codeforces.com/problemset/problem/486/A
+// Time Limit   :  seconds
+// Memory Limit :  MB
 #include <bits/stdc++.h>
-#define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
 
-typedef long long ll;
-typedef pair<int, int> ii;
-typedef vector<int> vi;
-
 int main() {
-
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(0);
 
-    ll n, a;
+    // Pattern is:
+    //      |  0 |  1 |  2 |  3 |  4 |  5 |  6 | ...
+    // f(n) |  0 | -1 |  1 | -2 |  2 | -3 |  3 | ...
+    long long n, ans;
     cin >> n;
-
-    a = ((n + 1) / 2) * (n & 1 ? -1LL : 1LL);
-    cout << a << endl;
+    ans = ((n + 1LL) / 2LL) * (n & 1LL ? -1LL : 1LL);
+    cout << ans << endl;
 }

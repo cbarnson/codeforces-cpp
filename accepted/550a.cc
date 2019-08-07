@@ -1,35 +1,52 @@
-// Problem #    : 550a
-// Created on   : 2018-10-29 14:23:12
+// 550A - Two Substrings
+// http://codeforces.com/problemset/problem/550/A
+// Time Limit   : 2 seconds
+// Memory Limit : 256 MB
 #include <bits/stdc++.h>
-#define FR(i, n) for (int i = 0; i < (int)(n); ++i)
 using namespace std;
 
-typedef long long ll;
-typedef pair<int, int> ii;
-typedef vector<int> vi;
-
+// time: 31 ms
+// memory: 300.00 KB
 int main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(0);
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    string s;
+    cin >> s;
 
-  string s;
-  cin >> s;
-  s = "XX" + s + "XX";
-
-  string k[] = {"AB", "BA"};
-  auto n = s.size();
-
-  FR(l, 2) {
-    string x = k[l], y = k[!l];
-    auto i = s.find(x);
-    if (i != string::npos) {
-      string a = s.substr(i + 2, n - i + 2);
-      auto j = a.find(y);
-      if (j != string::npos) {
-        cout << "YES" << endl;
-        return 0;
-      }
+    // Ugly code, but it does the job :)
+    int a = 0, b = 0;
+    int n = s.size();
+    for (int i = 0; i < n - 1; i++) {
+        if (!a && s[i] == 'A' && s[i + 1] == 'B') {
+            a = 1, i++;
+            continue;
+        }
+        if (a && s[i] == 'B' && s[i + 1] == 'A') {
+            b = 1, i++;
+            break;
+        }
     }
-  }
-  cout << "NO" << endl;
+
+    if (!a || !b) {
+        a = 0, b = 0;
+        for (int i = 0; i < n - 1; i++) {
+            if (!b && s[i] == 'B' && s[i + 1] == 'A') {
+                b = 1, i++;
+                continue;
+            }
+            if (b && s[i] == 'A' && s[i + 1] == 'B') {
+                a = 1, i++;
+                continue;
+            }
+        }
+    }
+    cout << (a && b ? "YES\n" : "NO\n");
+
+    // Too slow... times out
+    // regex re("(AB.+BA|BA.+AB)");
+    // if (regex_search(s, re)) {
+    //     cout << "YES\n";
+    // } else {
+    //     cout << "NO\n";
+    // }
 }

@@ -1,49 +1,47 @@
-// Problem #    : 489c
-// Created on   : 2018-10-21 11:45:26
+// 489C - Given Length and Sum of Digits...
+// http://codeforces.com/problemset/problem/489/C
+// Time Limit   : 1 seconds
+// Memory Limit : 256 MB
 #include <bits/stdc++.h>
-#define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
 
-typedef long long ll;
-typedef pair<int, int> ii;
-typedef vector<int> vi;
-
 int main() {
-
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(0);
 
-    int d, s;
-    cin >> d >> s;
+    int m, s;
+    cin >> m >> s;
 
-    if (s == 0 && d > 1) {
-        cout << -1 << " " << -1 << endl;
-        return 0;
-    } else if (s == 0 && d == 1) {
-        cout << 0 << " " << 0 << endl;
+    // Edge case, 0 <= s <= 900.
+    if (s == 0) {
+        cout << (m > 1 ? "-1 -1\n" : "0 0\n");
         return 0;
     }
 
-    string a = "";
-    while (s > 0) {
-        int x = min(s, 9);
-        s -= x;
-        a += (char)(x + '0');
-    }
-
-    if (a.size() > d) {
-        cout << -1 << " " << -1 << endl;
+    // Repeatedly subtract the largest possible single digit quantity from s,
+    // resulting in { 9, 9, ... X } with 'X' being some value between 1 and 9.
+    vector<int> A;
+    while (s) A.push_back(min(9, s)), s -= min(9, s);
+    vector<int> B(A);
+    if (A.size() > m) {
+        cout << "-1 -1\n";
         return 0;
     }
-
-    a += string(d - a.size(), '0');
-    string b = a;
-    reverse(b.begin(), b.end());
-    if (b.front() == '0') {
-        int i = b.find_first_not_of("0");
-        b[i] = b[i] - '1' + '0';
-        b[0] = b[0] + '1' - '0';
+    // Min
+    // Smallest possible will have a '1' in the most significant position, if
+    // there is room left in our capacity 'm' digits, take 1 off the back,
+    // append 0's, then re-add the 1.  This, reversed, is the smallest possible
+    // number with 'm' digits, and digit-sum 's'
+    while (A.size() < m) {
+        A[A.size() - 1] -= 1;
+        while (A.size() < m - 1) A.push_back(0);
+        A.push_back(1);
     }
+    for_each(rbegin(A), rend(A), [](auto a) { cout << a; }), cout << " ";
 
-    cout << b << " " << a << endl;
+    // Max
+    // Already in descending order, just need to append 0's if fewer than 'm'
+    // elements in B
+    while (B.size() < m) B.push_back(0);
+    for_each(begin(B), end(B), [](auto b) { cout << b; }), cout << "\n";
 }

@@ -1,28 +1,25 @@
-// Problem #    : 71A
-// Created on   : 2018-09-27 21:15:34
+// 71A - Way Too Long Words
+// http://codeforces.com/problemset/problem/71/A
+// Time Limit   : 1 seconds
+// Memory Limit : 256 MB
 #include <bits/stdc++.h>
-#define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
 
-typedef long long ll;
-typedef pair<int, int> ii;
-typedef vector<int> vi;
-
 int main() {
-
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(0);
 
     int n;
     cin >> n;
 
-    FR(i, n) {
+    while (n--) {
         string s;
         cin >> s;
-        int l = s.length();
-        if (l > 10) {
-            cout << s[0] << l - 2 << s[l - 1] << endl;
-        } else
+
+        if ((int)s.length() > 10) {
+            cout << s.front() << s.length() - 2 << s.back() << endl;
+        } else {
             cout << s << endl;
+        }
     }
 }

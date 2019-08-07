@@ -1,27 +1,21 @@
-// Problem #    : 118a
-// Created on   : 2018-09-27 22:55:09
+// 118A - String Task
+// http://codeforces.com/problemset/problem/118/A
+// Time Limit   : 2 seconds
+// Memory Limit : 256 MB
 #include <bits/stdc++.h>
-#define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
 
-typedef long long ll;
-typedef pair<int, int> ii;
-typedef vector<int> vi;
-
 int main() {
-
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(0);
 
-    string s = "";
+    string s, v = "aoyeui", ans = "";
     cin >> s;
-
     transform(begin(s), end(s), begin(s), ::tolower);
-    string ans = "";
-    for (auto c : s) {
-        if (string("aoyeui").find(c) == string::npos)
-            ans += string(".") + c;
+    for (int i = 0; i < s.size(); i++) {
+        if (v.find(s[i]) == string::npos) {
+            ans += string() + "." + s[i];
+        }
     }
-
     cout << ans << endl;
 }

@@ -1,34 +1,38 @@
-// Problem #    : 500a
-// Created on   : 2018-10-14 17:02:55
+// 500A - New Year Transportation
+// http://codeforces.com/problemset/problem/500/A
+// Time Limit   : 2 seconds
+// Memory Limit : 256 MB
 #include <bits/stdc++.h>
-#define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
 
-typedef long long ll;
-typedef pair<int, int> ii;
-typedef vector<int> vi;
+vector<vector<int>> g;
+void dfs(int s, vector<int> &vis) {
+    vis[s] = 1;
+    for (auto &i : g[s]) {
+        if (!vis[i]) {
+            dfs(i, vis);
+        }
+    }
+}
 
 int main() {
-
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-
+    cin.tie(0);
     int n, t;
     cin >> n >> t;
-
-    vi A(n - 1);
-    for (auto &x : A) cin >> x;
-    A.push_back(1);
-
-    t--;
-
-    for (int i = 0; i < n;) {
-        if (i == t) {
-            cout << "YES" << endl;
-            return 0;
-        }
-        i += A[i];
+    g.assign(n, vector<int>());
+    for (int i = 0; i < n - 1; i++) {
+        int x;
+        cin >> x;
+        assert(i + x < n);
+        g[i].push_back(i + x);
     }
 
-    cout << "NO" << endl;
+    vector<int> vis(n, 0);
+    dfs(0, vis);
+    if (vis[t - 1]) {
+        cout << "YES\n";
+    } else {
+        cout << "NO\n";
+    }
 }
