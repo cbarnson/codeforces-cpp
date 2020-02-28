@@ -46,7 +46,7 @@
         "t": true
     },
     "C_Cpp.errorSquiggles": "Disabled",
-    "C_Cpp.default.includePath":  [
+    "C_Cpp.default.includePath": [
         "c:\\msys64\\mingw64\\include\\c++\\8.3.0\\",
         "c:\\msys64\\mingw64\\include\\c++\\8.3.0\\x86_64-w64-mingw32\\bits\\",
     ],
